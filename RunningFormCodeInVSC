@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 function LoginForm(props) {
   const nameEl = React.useRef(null);
@@ -16,6 +15,8 @@ function LoginForm(props) {
       password: passwordEl.current.value,
       rememberMe: rememberMeEl.current.checked,
     }
+    // it would be a more completely correct REACT approach
+    // to make a JSX component to render formData out to a selector on the HTML
     console.log(formData);
   };
 
@@ -33,4 +34,3 @@ function LoginForm(props) {
 }
 
 ReactDOM.render(<div><LoginForm /></div>, document.getElementById("root"));
-
